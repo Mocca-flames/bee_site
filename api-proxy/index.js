@@ -18,25 +18,15 @@ export default {
     }
 
     try {
-      const API_BASE = "http://56.228.32.209:8000";
+      const API_BASE = "https://bb3499c1f210.ngrok-free.app"; // Replace with your real domain
       const targetUrl = `${API_BASE}${url.pathname}${url.search}`;
 
       console.log(`Proxying ${request.method} request to: ${targetUrl}`);
 
-      // Create headers that mimic a regular browser request
+      // Try with minimal headers - sometimes less is more
       const headers = new Headers();
-      headers.set(
-        "User-Agent",
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
-      );
-      headers.set("Accept", "application/json, text/plain, */*");
-      headers.set("Accept-Language", "en-US,en;q=0.9");
-      headers.set("Accept-Encoding", "gzip, deflate");
-      headers.set("Cache-Control", "no-cache");
-      headers.set("Connection", "keep-alive");
-      headers.set("Host", "56.228.32.209:8000");
-      headers.set("Origin", "https://bee.juniorflamebet.workers.dev");
-      headers.set("Referer", "https://bee.juniorflamebet.workers.dev/");
+      headers.set("User-Agent", "curl/7.68.0"); // Try a common, non-browser User-Agent
+      headers.set("Accept", "*/*");
 
       // Copy Content-Type if present
       const contentType = request.headers.get("Content-Type");
