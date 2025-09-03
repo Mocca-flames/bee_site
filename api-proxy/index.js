@@ -13,12 +13,13 @@ export default {
           "Access-Control-Allow-Headers":
             "Content-Type, Authorization, X-Requested-With",
           "Access-Control-Max-Age": "86400",
+          "ngrok-skip-browser-warning": "true",
         },
       });
     }
 
     try {
-      const API_BASE = "https://bb3499c1f210.ngrok-free.app"; // Replace with your real domain
+      const API_BASE = "https://internally-alive-bream.ngrok-free.app"; // Replace with your real domain
       const targetUrl = `${API_BASE}${url.pathname}${url.search}`;
 
       console.log(`Proxying ${request.method} request to: ${targetUrl}`);
