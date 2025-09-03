@@ -1,0 +1,9 @@
+name = "api-proxy"
+main = "index.js"
+compatibility_date = "2025-09-03"
+compatibility_flags = ["nodejs_compat"]
+
+# Optional: Add custom domain
+# routes = [
+#   { pattern = "api.yourdomain.com/*", custom_domain = true }
+# ]
