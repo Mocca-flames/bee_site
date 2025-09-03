@@ -51,7 +51,7 @@ export default {
             : undefined,
         cf: {
           // Try to bypass some Cloudflare restrictions
-          resolveOverride: "56.228.32.209",
+          resolveOverride: "https://internally-alive-bream.ngrok-free.app",
         },
       });
 
